@@ -1,0 +1,61 @@
+{
+    "id": "com.sap.sample.nesteddonut",
+    "version": "1.0.0",
+    "name": "NestedDonut",
+    "description": "Nested Donut",
+    "newInstancePrefix": "NestedDonut",
+    "icon": "https://bhargavab8.github.io/amchart/NestedDonut.png",
+    "vendor": "SAP",
+    "eula": "",
+    "license": "",
+    "webcomponents": [
+        {
+            "kind": "main",
+            "tag": "com-sample-nesteddonut",
+            "url": "https://bhargavab8.github.io/amchart/Nested_Donut.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        }
+       
+    ],
+    "properties": {
+            "width": {
+            "type": "integer",
+            "default": 500
+        },
+        "height": {
+            "type": "integer",
+            "default": 500
+        },
+        "value": {
+            "type": "string",
+            "description": "The new value"
+        }
+    },
+    "methods": {
+        "setvalue": {
+            "description": "Sets the value.",
+            "parameters": [
+                {
+                    "name": "newvalue",
+                    "type": "string",
+                    "description": "The new value"
+                }
+            ],
+            "body": "this.value = newvalue;"
+        },
+        "getvalue":{
+            "returnType": "string",
+            "description": "Returns the guage value.",
+            "body": "return this.value;"
+            
+        } 
+        
+    },
+    "events": {
+        "onClick": {
+            "description": "Called when the user clicks the chart."
+        }
+    }
+}
+ 
