@@ -1,11 +1,7 @@
 (function() { 
 	let template = document.createElement("template");
     template.innerHTML = `
-    #chart_div {
-      width: 100%;
-      height: 100%;
-    }
-        <div id="chart_div" ></div>`;
+        <div id="chart_div" style="width:900px;height:800px" ></div>`;
 
     class NestedDonut extends HTMLElement {
 		    constructor() {
@@ -27,6 +23,12 @@
         onCustomWidgetAfterUpdate(changedProperties) {
             this._props = { ...this._props, ...changedProperties };
             var myprops = this._props
+            window.onload= function(){
+              var dv = document.getElementById("chart_div")
+              dv.style.width=myprops.width+"px";
+              dv.style.height=myprops.height+"px";
+            }
+
             var val = myprops.value;           
 
 			const script = document.createElement('script');
