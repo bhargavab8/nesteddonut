@@ -25,7 +25,7 @@
             var myprops = this._props
             var style = document.createElement('style');
             style.type = 'text/css';
-            style.innerHTML = '.Chart1 { width: '+ myprops.width +'px; height: '+ myprops.height+'px; }';
+            style.innerHTML = '.Chart1 { width: 900px; height: 800px; }';
             document.getElementsByTagName('head')[0].appendChild(style);
             
 
