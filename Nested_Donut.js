@@ -1,7 +1,11 @@
 (function() { 
 	let template = document.createElement("template");
-	  template.innerHTML = `
-        <div id="chart_div" style="width:900px;height:800px"></div>`;
+    template.innerHTML = `
+    #chart_div {
+      width: 100%;
+      height: 100%;
+    }
+        <div id="chart_div" ></div>`;
 
     class NestedDonut extends HTMLElement {
 		    constructor() {
