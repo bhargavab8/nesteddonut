@@ -24,10 +24,10 @@
             this._props = { ...this._props, ...changedProperties };
             var myprops = this._props
 
-            template.onload=function(){
+            window.onload=function(){
               var dv = document.getElementById("chart_div")
-              dv.style.width=myprops.width+"px";
-              dv.style.height=myprops.height+"px";
+              dv.style.width="900px";
+              dv.style.height="800px";
             }
 
             var val = myprops.value;           
