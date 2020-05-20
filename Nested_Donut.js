@@ -24,12 +24,11 @@
             this._props = { ...this._props, ...changedProperties };
             var myprops = this._props
 
-            window.onload=function(){
+            
               var dv = document.getElementById("chart_div")
-              dv.style.width="900px";
-              dv.style.height="800px";
-            }
-
+              dv.style.width=myprops.width+"px";
+              dv.style.height=myprops.height+"px";
+            
             var val = myprops.value;           
 
 			const script = document.createElement('script');
