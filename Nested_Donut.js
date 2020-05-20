@@ -1,7 +1,7 @@
 (function() { 
 	let template = document.createElement("template");
     template.innerHTML = `
-        <div id="chart_div" class="Chart1" style="" ></div>`;
+        <div id="chart_div" class="Chart1" style="width:800px; height:600px" ></div>`;
 
     class NestedDonut extends HTMLElement {
 		    constructor() {
@@ -22,13 +22,7 @@
 
         onCustomWidgetAfterUpdate(changedProperties) {
             this._props = { ...this._props, ...changedProperties };
-            var myprops = this._props
-            var style = document.createElement('style');
-            style.type = 'text/css';
-            style.innerHTML = '.Chart1 { width: 900px; height: 800px; }';
-            document.getElementsByTagName('head')[0].appendChild(style);
-            
-
+            var myprops = this._props       
             var val = myprops.value;           
 
 			const script = document.createElement('script');
@@ -72,7 +66,7 @@
                           
                           // Create chart instance
                           const ctx = document.querySelector(".sapCustomWidgetWebComponent").shadowRoot.querySelector("#chart_div");
-                          var chart = am4core.create(ctx, am4charts.PieChart);
+                           var chart = am4core.create(ctx, am4charts.PieChart);
                           
                           // Let's cut a hole in our Pie chart the size of 40% the radius
                           chart.innerRadius = am4core.percent(40);
