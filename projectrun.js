@@ -3,7 +3,7 @@
     template.innerHTML = `
         <div id="chart_div" class="Chart1" style="width:800px; height:600px" ></div>`;
 
-    class projectrun extends HTMLElement {
+    class Projectrun extends HTMLElement {
 		    constructor() {
 			      super(); 
 			      let shadowRoot = this.attachShadow({mode: "open"});
@@ -116,5 +116,5 @@
 
             }
     }
-    customElements.define("com-sample-projectrun", projectrun);
+    customElements.define("com-sample-projectrun", Projectrun);
 })();
